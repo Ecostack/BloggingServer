@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bluebird = require('bluebird');
 bluebird.promisifyAll(mongoose);
-mongoose.connect('mongodb://localhost/bloggingTest');
+mongoose.connect('mongodb://mongo/bloggingTest');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

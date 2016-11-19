@@ -1,0 +1,16 @@
+    version: '2'
+    services:
+      web:
+        build: .
+        ports:
+         - "3000:3000"
+        volumes:
+         - .:/code
+        depends_on:
+         - mongo
+      mongo:
+        volumes:
+        - './docker/mongodb:/data/db'
+        ports:
+        - "27099:27017"
+        image: mongo:latest

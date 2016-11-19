@@ -138,3 +138,4 @@ jspm_packages
 # *.ipr
 
 /public
+/docker
